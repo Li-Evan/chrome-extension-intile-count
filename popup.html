@@ -23,6 +23,60 @@
     </div>
     <div id="result" class="result"></div>
     <div id="loading" class="loading" style="display: none;">查询中...</div>
+    
+    <!-- SEO指标计算区域 -->
+    <div class="metrics-section">
+      <h2>SEO指标计算</h2>
+      <div class="metrics-inputs">
+        <div class="input-field">
+          <label>Intitle结果数量</label>
+          <input type="number" id="intitleCount" placeholder="输入或自动获取">
+        </div>
+        <div class="input-field">
+          <label>月搜索量</label>
+          <input type="number" id="monthlyVolume" placeholder="输入月搜索量">
+        </div>
+        <div class="input-field">
+          <label>关键词难度(KD)</label>
+          <input type="number" id="keywordDifficulty" placeholder="输入KD值 (0-100)">
+        </div>
+      </div>
+      
+      <button id="calculateBtn" class="calculate-btn">计算指标</button>
+      
+      <!-- <div class="calculation-note">
+        <div class="note-title">计算假设说明：</div>
+        <div class="note-content">
+          <strong>1. 外链成本阶梯定价：</strong><br>
+          • 前10个链接：每个$100<br>
+          • 11-50个链接：每增加1个，成本增加1%<br>
+          • 51-200个链接：每增加1个，成本增加1.5%<br>
+          • 200个以上：每增加1个，成本增加2%<br>
+          <strong>2. 点击价值：</strong>假设每个点击带来$0.1收益<br>
+          <strong>3. 流量获取：</strong>假设能够获取全部搜索流量
+        </div>
+      </div> -->
+      
+      <div class="metrics-results" id="metricsResults" style="display: none;">
+        <div class="metric-item">
+          <div class="metric-label">KGR (Keyword Golden Ratio)</div>
+          <div class="metric-value" id="kgrValue">-</div>
+          <div class="metric-formula">= intitle结果 / 月搜索量</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-label">EKGR (Enhanced KGR)</div>
+          <div class="metric-value" id="ekgrValue">-</div>
+          <div class="metric-formula">= (intitle × (1 + KD/100)) / 月搜索量</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-label">KDROI</div>
+          <div class="metric-value" id="kdroiValue">-</div>
+          <div class="metric-formula">= ((年收入 - 投资成本) / 投资成本) × 100%<br>
+          年收入 = (月搜索量/30) × 0.1 × 365<br>
+          投资成本基于阶梯定价计算</div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>

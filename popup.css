@@ -140,3 +140,146 @@ h1 {
   }
 }
 
+/* SEO指标计算区域样式 */
+.metrics-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.metrics-section h2 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.metrics-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-field label {
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+}
+
+.input-field input {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-field input::placeholder {
+  color: #999;
+}
+
+.calculate-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.calculate-btn:active {
+  transform: translateY(0);
+}
+
+.calculation-note {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.note-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.note-content {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.note-content strong {
+  color: #444;
+}
+
+.metrics-results {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metric-item {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metric-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.metric-value.low-competition {
+  color: #28a745;
+}
+
+.metric-value.medium-competition {
+  color: #ffc107;
+}
+
+.metric-value.high-competition {
+  color: #dc3545;
+}
+
+.metric-formula {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+  line-height: 1.4;
+}
+
