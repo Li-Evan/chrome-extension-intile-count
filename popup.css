@@ -5,7 +5,7 @@
 }
 
 body {
-  width: 400px;
+  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: #f8f9fa;
 }
@@ -28,14 +28,45 @@ h1 {
   margin-bottom: 16px;
 }
 
+.input-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 #keyword {
   flex: 1;
-  padding: 10px 14px;
+  padding: 10px 42px 10px 14px;
   border: none;
   border-radius: 8px;
   font-size: 14px;
   outline: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.google-search-icon {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.google-search-icon:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.google-search-icon:active {
+  transform: scale(0.95);
 }
 
 #keyword::placeholder {

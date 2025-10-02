@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const keywordInput = document.getElementById('keyword');
     const searchBtn = document.getElementById('searchBtn');
+    const googleSearchBtn = document.getElementById('googleSearchBtn');
     const resultDiv = document.getElementById('result');
     const loadingDiv = document.getElementById('loading');
 
@@ -9,6 +10,19 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'Enter') {
             searchBtn.click();
         }
+    });
+
+    // Google搜索按钮点击事件
+    googleSearchBtn.addEventListener('click', function () {
+        const keyword = keywordInput.value.trim();
+        if (!keyword) {
+            resultDiv.textContent = '请输入关键词';
+            resultDiv.className = 'result empty';
+            return;
+        }
+        
+        const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(keyword)}`;
+        chrome.tabs.create({ url: searchUrl });
     });
 
     searchBtn.addEventListener('click', async function () {
